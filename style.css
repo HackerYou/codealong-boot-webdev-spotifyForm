@@ -1,0 +1,184 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyHidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* 
+Spotify green: #1DB954 
+liiiight gray: #f9f9f9
+border color: rgb(223, 224, 230);
+Medium gray:#88898c
+"Black": #1c1c1f
+"DarkGray": #222326
+*/
+
+/* Use the 'Lato' font loaded in the head of the HTML document */
+body{
+  font-family: 'Lato', sans-serif;
+}
+.wrapper{
+  margin: 0 auto;
+  max-width:425px;
+}
+
+h2{
+  text-align: center;
+  font-weight: 700;
+  margin: 20px 0 0 0 ;
+  font-size: 18px;
+}
+/* Use ::after for the select arrow  */
+
+input[type=text], 
+input[type=email], 
+input[type=password], 
+select{
+  height: 48px;
+  padding: 0 13px;
+  width: 100%;
+  margin: 10px 0;
+  border:0;
+  border:1px solid rgb(223, 224, 230);
+}
+
+a{
+  color:#1DB954;
+}
+form{
+  text-align:center;
+}
+fieldset{
+  border:none;
+  text-align:left;
+}
+.dob legend{
+  color:#88898c;
+}
+.dob input[type=text]{
+  margin-top:0;
+}
+.dob input[type=text]:first-of-type, .dob input[type=text]:last-of-type{
+  width: 25%;
+  float:left;
+}
+.dob select{
+  width: calc(50% - 36px);
+  margin: 0 18px;
+  -moz-appearance: none;
+	-webkit-appearance: none;
+  appearance: none;
+  float: left;
+  color:#88898c;
+  position: relative;
+  background-image: url(assets/br-down.png);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+.gender{
+  margin-bottom:10px ;
+}
+.gender input{
+  margin-right:8px;
+}
+.gender label{
+  margin-right:20px;
+}
+button[type=submit]{
+  background-color: #1DB954;
+  border:none;
+  color:white;
+  text-transform: uppercase;
+  min-width: 320px;
+  padding:10px 20px;
+  border-radius:500px;
+  margin: 0 auto;
+}
+
+.tos{
+  font-size: 12px;
+}
+
+.tosItem{
+  position: relative;
+  margin:10px 0;
+}
+.tosItem input{
+ position: absolute;
+ top:0;
+ left:0;
+}
+.tosItem label {
+  position: relative;
+  left:20px;
+  font-size: 12px;
+}
+
+.captcha{
+  background-color:#f9f9f9;
+  border:2px solid rgb(223, 224, 230);
+  width: 85%;
+  position: relative;
+  margin: 0 auto 20px auto;
+  
+}
+.captcha input{
+  -webkit-appearance:none;
+  width:30px;
+  height:30px;
+  background:white;
+  border-radius:5px;
+  border:2px solid rgb(223, 224, 230);
+  margin:30px 10px 10px 10px;
+  float: left;
+}
+.captcha input:focus{
+  box-shadow:0px 0px 3px blue;
+}
+.captcha input:active{
+  box-shadow:0px 0px 3px red;
+}
+.captcha input:checked::after{
+  content:'✔️';
+  padding-left:2px;
+  line-height:1.8;  
+}
+.captcha label{
+  float: left;  
+  margin-top:35px;
+}
+.captcha figure{
+  float:right;
+  margin:15px 15px;
+}
+.captcha figure img{
+  width:40%; 
+}
+figcaption{
+font-size:0.8em
+}
+figcaption span{
+  text-transform: uppercase;
+}
+.captcha a{
+  color:#222326;
+    font-size: 0.7em;
+}
+
+.login{
+  text-align: center;
+}
